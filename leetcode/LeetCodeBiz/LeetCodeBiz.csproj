@@ -40,9 +40,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CountAndSayProblem.cs" />
+    <Compile Include="FlattenBinaryTreetoLinkedList.cs" />
+    <Compile Include="GrayCode.cs" />
     <Compile Include="HouseRobber.cs" />
     <Compile Include="HouseRobber2.cs" />
+    <Compile Include="LinkedListCycle2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SortList.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
