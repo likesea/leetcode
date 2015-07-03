@@ -7,25 +7,28 @@ using System.Threading.Tasks;
 using LeetCodeBiz;
 namespace ConsoleApp
 {
+
     class Program
     {
         static void Main(string[] args)
         {
-            var test = new HouseRobber2();
-            int[] nums = new[] {6,4,3,9,5,9};
-            //Console.WriteLine(test.Rob(nums));
-            TestGrayCode();
+            TestSpiralMatrix2(2);
 
         }
 
+        static void TestSpiralMatrix2(int m)
+        {
+            var obj = new SpiralMatrix2();
+            obj.GenerateMatrix(m);
+        }
         static void TestTreeToList()
         {
             TreeNode root = new TreeNode(1);
-            root.left=new TreeNode(2);
+            root.left = new TreeNode(2);
             root.left.left = new TreeNode(3);
-            root.left.right= new TreeNode(4);
-            root.right=new TreeNode(5);
-            root.right.right=new TreeNode(6);
+            root.left.right = new TreeNode(4);
+            root.right = new TreeNode(5);
+            root.right.right = new TreeNode(6);
             new FlattenBinaryTreetoLinkedList().Flatten(root);
         }
 
@@ -46,7 +49,7 @@ namespace ConsoleApp
 
         static void TestGrayCode()
         {
-           var list = new GrayCodeSolution().GrayCode(3);
+            var list = new GrayCodeSolution().GrayCode(3);
             Console.WriteLine("aa");
         }
     }
