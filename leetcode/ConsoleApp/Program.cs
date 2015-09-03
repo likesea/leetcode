@@ -11,10 +11,7 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            var test = new HouseRobber2();
-            int[] nums = new[] {6,4,3,9,5,9};
-            //Console.WriteLine(test.Rob(nums));
-            TestGrayCode();
+            new Queen().SolveQueens(8);
 
         }
 
@@ -48,6 +45,12 @@ namespace ConsoleApp
         {
            var list = new GrayCodeSolution().GrayCode(3);
             Console.WriteLine("aa");
+        }
+
+        static void TestSingleNumber()
+        {
+            int[] list = new[] {1, 2, 3, 4, 4, 2, 1};
+            var re = new SingleNumberSol().SingleNumber(list);
         }
     }
 }
