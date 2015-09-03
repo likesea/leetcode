@@ -14,10 +14,6 @@ namespace LeetCodeBiz
         public void SolveQueens(int n)
         {
             int [] queInts = new int[n];
-            for (int i = 0; i < n; i++)
-            {
-                queInts[i] = -1;
-            }
             Solve(0,queInts);
             Console.WriteLine(count);
         }
@@ -29,14 +25,12 @@ namespace LeetCodeBiz
                 CW(queens);
                 return;
             }
-            
-            for (int i = queens[current]+1; i < queens.Length; i++)
+            for (int i = 0; i < queens.Length; i++)
             {
-                if (CanPut(current, queens, i))
+                queens[current] = i;
+                if (CanPut(current, queens))
                 {
-                    queens[current] = i;
-                    Solve(current+1, queens);
-                    queens[current] = -1;//能够运行该语句，说明需要回溯，把以前记录清除
+                    Solve(current+1, queens);//递归时，current值会随着递归深度变化，不能写成单独语句current++; 这样
                 }
             }
         }
@@ -53,11 +47,11 @@ namespace LeetCodeBiz
             }
             Console.WriteLine("\n\n");
         }
-        private bool CanPut(int current, int[] queens, int position)
+        private bool CanPut(int current, int[] queens)
         {
             for (int i = 0; i < current; i++)
             {
-                if (queens[i] != position && Math.Abs(i - current) != Math.Abs(position - queens[i]))
+                if (queens[i] != queens[current] && Math.Abs(i - current) != Math.Abs(queens[current] - queens[i]))
                 {
                     continue;
                 }
