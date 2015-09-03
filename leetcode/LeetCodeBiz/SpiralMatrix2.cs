@@ -8,27 +8,45 @@ namespace LeetCodeBiz
 {
     public class SpiralMatrix2
     {
+        private static int flag = 0;
         public int[,] GenerateMatrix(int n)
         {
-            int[] loopNum = new int[(int) Math.Sqrt(n)];
-            for (int i = 0; i < (int)Math.Sqrt(n); i++)
+            int [,]result = new int[n,n];
+            int[,] move = new int[,]{{0,1},{1,0},{0,-1},{-1,0}};
+            int totalNum = n*n;
+            int m = n;
+            int [] pos = new int[2]{0,-1};
+            int dir = 0;
+            int i = 0;
+            while (i<totalNum)
             {
-                loopNum[i] = 2*n + 2*(n - 2);
-                n -= 2;
-            }
-            int[,] matrix = new int[n,n];
-            for (int i = 0; i < n; i++)
-            {
-                for (int j = 0; j < n; j++)
+                for (int j = 0; j < m; j++)
                 {
-                    var minInt = Math.Min(i, j);
-                    for (int k = 1; k < minInt; k++)
-                    {
-                        matrix[i, j] = loopNum[k - 1];
-                    }
-                    matrix[i,j]+
+                    pos[0] += move[dir, 0];
+                    pos[1] += move[dir, 1];
+                    result[pos[0], pos[1]] = ++i;
                 }
+                m = GetFlag(m);
+                dir = (dir + 1)%4;
             }
+            return result;
+        }
+
+        private int GetFlag(int m)
+        {
+
+            switch (flag)
+            {
+                case 0:
+                    flag = 1;
+                    m--;
+                    break;
+                case 1:
+                    flag = 0;
+                    break;
+            }
+            
+            return m;
         }
     }
 }

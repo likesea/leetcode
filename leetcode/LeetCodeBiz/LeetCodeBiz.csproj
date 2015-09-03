@@ -49,6 +49,7 @@
     <Compile Include="Queen.cs" />
     <Compile Include="SingleNumber.cs" />
     <Compile Include="SortList.cs" />
+    <Compile Include="SpiralMatrix2.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
