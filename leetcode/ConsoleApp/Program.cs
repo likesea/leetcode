@@ -12,7 +12,9 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            new Queen().SolveQueens(8);
+            //new Queen().SolveQueens(8);
+            Console.WriteLine(new MinCost(15, new int[] {2,3,4,5,1}).Solve());
+            
 
         }
 

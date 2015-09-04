@@ -45,6 +45,7 @@
     <Compile Include="HouseRobber.cs" />
     <Compile Include="HouseRobber2.cs" />
     <Compile Include="LinkedListCycle2.cs" />
+    <Compile Include="MinCost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queen.cs" />
     <Compile Include="SingleNumber.cs" />
