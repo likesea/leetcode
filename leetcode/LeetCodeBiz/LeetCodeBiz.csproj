@@ -40,18 +40,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CountAndSayProblem.cs" />
+    <Compile Include="DynamicProgramming\BagProblem.cs" />
+    <Compile Include="DynamicProgramming\LCS.cs" />
+    <Compile Include="DynamicProgramming\LIS.cs" />
     <Compile Include="FlattenBinaryTreetoLinkedList.cs" />
     <Compile Include="GrayCode.cs" />
     <Compile Include="HouseRobber.cs" />
     <Compile Include="HouseRobber2.cs" />
     <Compile Include="LinkedListCycle2.cs" />
-    <Compile Include="MinCost.cs" />
+    <Compile Include="GreedyAlgorithm\MinCost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queen.cs" />
     <Compile Include="SingleNumber.cs" />
     <Compile Include="SortList.cs" />
     <Compile Include="SpiralMatrix2.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

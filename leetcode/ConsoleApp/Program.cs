@@ -5,6 +5,8 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using LeetCodeBiz;
+using LeetCodeBiz.DynamicProgramming;
+
 namespace ConsoleApp
 {
 
@@ -13,11 +15,13 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             //new Queen().SolveQueens(8);
-            Console.WriteLine(new MinCost(15, new int[] {2,3,4,5,1}).Solve());
-            
-
+            //Console.WriteLine(new MinCost(15, new int[] {2,3,4,5,1}).Solve());
+            //Console.WriteLine(new LCS("asfdkkk","adfkkk").Solve());
+            //Console.WriteLine(new BagProblem(new []{3,4,2},new int[]{4,5,3},7 ).SolveCompleteBagProblem());
+            //Console.WriteLine(new BagProblem(new[] { 3, 5, 8 }, new int[] { 3, 2, 2 }, 17).SolveBagProblem2());
+            //Console.WriteLine(new LIS().Solve2(new int[]{4,2,3,1,5}));
+            new LIS().binarySearch(new int[]{1,2,3,4,5},3 );
         }
-
         static void TestSpiralMatrix2(int m)
         {
             var obj = new SpiralMatrix2();
