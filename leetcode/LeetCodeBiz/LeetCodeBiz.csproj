@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="CountAndSayProblem.cs" />
     <Compile Include="DynamicProgramming\BagProblem.cs" />
+    <Compile Include="DynamicProgramming\DPCount.cs" />
     <Compile Include="DynamicProgramming\LCS.cs" />
     <Compile Include="DynamicProgramming\LIS.cs" />
     <Compile Include="FlattenBinaryTreetoLinkedList.cs" />
