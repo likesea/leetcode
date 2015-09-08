@@ -16,7 +16,7 @@ namespace LeetCodeBiz.DynamicProgramming
         /// </summary>
         private int count;
         /// <summary>
-        /// 被分多少份
+        /// 被分不超过多少份
         /// </summary>
         private int groups;
 
@@ -27,7 +27,11 @@ namespace LeetCodeBiz.DynamicProgramming
             groups = m;
             mod = M;
         }
-
+        /// <summary>
+        /// 考虑a(1)+a(2).....+a(m)=n, 为n的m划分，如果所有a(i)>0,那么{a(i)-1} 就对应n-m的m划分，如果有
+        /// a(i)=0,则对应n的m-1划分
+        /// </summary>
+        /// <returns></returns>
         public int Solve()
         {
             int [,] dp = new int[groups+1,count+1];
