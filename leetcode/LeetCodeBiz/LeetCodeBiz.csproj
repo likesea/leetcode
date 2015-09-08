@@ -44,6 +44,7 @@
     <Compile Include="DynamicProgramming\DPCount.cs" />
     <Compile Include="DynamicProgramming\LCS.cs" />
     <Compile Include="DynamicProgramming\LIS.cs" />
+    <Compile Include="DynamicProgramming\MultiSetCombin.cs" />
     <Compile Include="FlattenBinaryTreetoLinkedList.cs" />
     <Compile Include="GrayCode.cs" />
     <Compile Include="HouseRobber.cs" />

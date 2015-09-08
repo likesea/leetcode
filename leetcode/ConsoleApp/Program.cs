@@ -21,7 +21,8 @@ namespace ConsoleApp
             //Console.WriteLine(new BagProblem(new[] { 3, 5, 8 }, new int[] { 3, 2, 2 }, 17).SolveBagProblem2());
             //Console.WriteLine(new LIS().Solve2(new int[]{4,2,3,1,5}));
             //new LIS().binarySearch(new int[]{1,2,3,4,4,4,4,5},4 );
-            Console.WriteLine(new DPCount(4, 3, 10000).Solve());
+            //Console.WriteLine(new DPCount(4, 3, 10000).Solve());
+            Console.WriteLine(new MultiSetCombin(3,3,new int[]{1,2,3},10000 ).Solve());
            
         }
         static void TestSpiralMatrix2(int m)
