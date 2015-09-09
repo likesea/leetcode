@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LeetCodeBiz;
 using LeetCodeBiz.DynamicProgramming;
+using LeetCodeBiz.Queue;
 
 namespace ConsoleApp
 {
@@ -22,8 +23,17 @@ namespace ConsoleApp
             //Console.WriteLine(new LIS().Solve2(new int[]{4,2,3,1,5}));
             //new LIS().binarySearch(new int[]{1,2,3,4,4,4,4,5},4 );
             //Console.WriteLine(new DPCount(4, 3, 10000).Solve());
-            Console.WriteLine(new MultiSetCombin(3,3,new int[]{1,2,3},10000 ).Solve());
-           
+            //Console.WriteLine(new MultiSetCombin(3,3,new int[]{1,2,3},10000 ).Solve());
+            //var queque = new PriorityQueue<int>();
+            //queque.Add(1);
+            //queque.Add(2);
+            //queque.Add(3);
+            //queque.Add(4);
+            //var max = queque.Top();
+            //queque.Remove(4);
+            //max = queque.Top();
+            new GasStation(25, 10, new int[] {10, 14, 20, 21}, new[] {10, 5, 2, 4}).Solve();
+
         }
         static void TestSpiralMatrix2(int m)
         {
