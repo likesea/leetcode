@@ -51,6 +51,7 @@
     <Compile Include="HouseRobber2.cs" />
     <Compile Include="LinkedListCycle2.cs" />
     <Compile Include="GreedyAlgorithm\MinCost.cs" />
+    <Compile Include="MergeFindSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queen.cs" />
     <Compile Include="Queue\GasStation.cs" />
