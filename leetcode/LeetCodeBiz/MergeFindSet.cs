@@ -50,4 +50,50 @@ namespace LeetCodeBiz
             return FindParent(x).Equals(FindParent(y));
         }
     }
+
+    public class MergeFindSet2
+    {
+        private int[] parent;
+        private int[] rank;
+
+        public MergeFindSet2(int n)
+        {
+            parent = new int[n];
+            rank = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                parent[i] = i;
+            }
+        }
+
+        public int Find(int x)
+        {
+            if (parent[x] == x)
+            {
+                return x;
+            }
+            return parent[x] = Find(parent[x]);
+        }
+
+        public void Unite(int x, int y)
+        {
+            x = Find(x);
+            y = Find(y);
+            if (x == y) return;
+            if (rank[x] < rank[y])
+            {
+                parent[x] = y;
+            }
+            else
+            {
+                parent[y] = x;
+                if (rank[x] == rank[y]) rank[x]++;
+            }
+        }
+
+        public bool Same(int x, int y)
+        {
+            return Find(x) == Find(y);
+        }
+    }
 }
