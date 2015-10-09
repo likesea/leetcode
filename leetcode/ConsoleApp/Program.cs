@@ -5,6 +5,9 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using LeetCodeBiz;
+using LeetCodeBiz.DynamicProgramming;
+using LeetCodeBiz.Queue;
+
 namespace ConsoleApp
 {
 
@@ -17,7 +20,6 @@ namespace ConsoleApp
             inverseTree.InverseTree(tree);
 
         }
-
         static Node GetBinaryTree()
         {
             var root = new Node() {Val = 9};
