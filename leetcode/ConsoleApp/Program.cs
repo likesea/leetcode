@@ -12,8 +12,21 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            new Queen().SolveQueens(8);
+            var inverseTree = new InverseBinaryTree();
+            var tree = GetBinaryTree();
+            inverseTree.InverseTree(tree);
 
+        }
+
+        static Node GetBinaryTree()
+        {
+            var root = new Node() {Val = 9};
+            root.Right= new Node() {Val = 8};
+            root.Left = new Node() {Val = 7};
+            var rootLeft = root.Left;
+            rootLeft.Right = new Node() {Val = 6};
+            rootLeft.Left = new Node() {Val =5};
+            return root;
         }
 
         static void TestSpiralMatrix2(int m)
